@@ -90,9 +90,9 @@ function    searchFunction(){
                         <div class="collection-sort">
                             <label>Filter by:</label>
                             <select id="sel1" onchange = "filterFunc()">
-                                <option   value="all toys">all toys</option>
-                                <option  value="gun">Gun</option>
-                                <option  value="doll">Doll</option>
+                                <option   value="all crystals">all crystals</option>
+                                <option  value="oil">Oil</option>
+                                <option  value="crystal">crystal</option>
 								<option  value="other">Other</option>
                                 
                             </select>
@@ -118,12 +118,12 @@ function    searchFunction(){
                 <section class="products" id="sectionpart">
                     
                     
-                    <div class="product-card" id = "doll1">
+                    <div class="product-card" id = "oil1">
                         <div class="product-image">
-                            <img src="./img/toy1.jpg" class="primg0" alt="unavailable">
+                            <img src="./img/Moon_oil.jpg" class="primg0" alt="unavailable">
                         </div>
                         <div class="product-info">
-                            <h5>Plashy Toy</h5>
+                            <h5>Moon Oil</h5>
                             <h6>$19.99</h6>
                             <!-----start rating----->
                             <span class="rating" data-default-rating="4.5"></span> 
@@ -132,12 +132,12 @@ function    searchFunction(){
                     </div>
                     
                     
-                    <div class="product-card" id = "doll2">
+                    <div class="product-card" id = "crystal1">
                         <div class="product-image">
-                            <img src="./img/toy2.jpg" class="primg0" alt="unavailable">
+                            <img src="./img/SmokyQuartz.jpg.jpg" class="primg0" alt="unavailable">
                         </div>
                         <div class="product-info">
-                            <h5>Teddy Bear</h5>
+                            <h5>Smoky Quartz</h5>
                             <h6>$9.99</h6>
                             <!-----start rating----->
                             <span class="rating" data-default-rating="3.5"></span> 
@@ -145,12 +145,25 @@ function    searchFunction(){
                         </div>
                     </div>
                     
-                    <div class="product-card" id = "gun1">
+                    <div class="product-card" id = "crystal2">
                         <div class="product-image">
-                            <img src="./img/gun1.jpg" class="primg0" alt="unavailable">
+                            <img src="./img/celestite.jpg" class="primg0" alt="unavailable">
                         </div>
                         <div class="product-info">
-                            <h5>Toy Gun</h5>
+                            <h5>Celestite</h5>
+                            <h6>$12.08</h6>
+                            <!-----start rating----->    
+                            <span class="rating" data-default-rating="4"></span> 
+                            
+                            <!-----end rating----->
+                        </div>
+                    </div>
+			      <div class="product-card" id = "crystal3">
+                        <div class="product-image">
+                            <img src="./img/quartz.jpg" class="primg0" alt="unavailable">
+                        </div>
+                        <div class="product-info">
+                            <h5>Quartz</h5>
                             <h6>$12.08</h6>
                             <!-----start rating----->    
                             <span class="rating" data-default-rating="4"></span> 
@@ -161,18 +174,62 @@ function    searchFunction(){
                     
                     <div class="product-card" id = "other">
                         <div class="product-image">
-                            <img src="./img/toy3.jpg" class="primg0" alt="unavailable">
+                            <img src="./img/dragonsblood.jpg" class="primg0" alt="unavailable">
                         </div>
                         <div class="product-info">
-                            <h5>Circles</h5>
+                            <h5>Dragons blood jasper</h5>
                             <h6>$20.19</h6>
                             <!-----start rating----->
                             
-                            <span class="rating" data-default-rating="2"></span> 
+                            <span class="rating" data-default-rating="5"></span> 
                             
                             <!-----end rating----->
                         </div>
                     </div>
+			    <div class="product-card" id = "crystal4">
+                        <div class="product-image">
+                            <img src="./img/fluorite.jpg" class="primg0" alt="unavailable">
+                        </div>
+                        <div class="product-info">
+                            <h5>Fluorite</h5>
+                            <h6>$19.19</h6>
+                            <!-----start rating----->
+                            
+                            <span class="rating" data-default-rating="4.5"></span> 
+                            
+                            <!-----end rating----->
+                        </div>
+                    </div>
+			 <div class="product-card" id = "crystal5">
+                        <div class="product-image">
+                            <img src="./img/malachite.jpg" class="primg0" alt="unavailable">
+                        </div>
+                        <div class="product-info">
+                            <h5>malachite</h5>
+                            <h6>$22.22</h6>
+                            <!-----start rating----->
+                            
+                            <span class="rating" data-default-rating="5"></span> 
+                            
+                            <!-----end rating----->
+                        </div>
+                    </div>
+			    <div class="product-card" id = "crystal5">
+                        <div class="product-image">
+                            <img src="./img/moonstone.jpg" class="primg0" alt="unavailable">
+                        </div>
+                        <div class="product-info">
+                            <h5>Moonstone</h5>
+                            <h6>$5.55</h6>
+                            <!-----start rating----->
+                            
+                            <span class="rating" data-default-rating="4.5"></span> 
+                            
+                            <!-----end rating----->
+                        </div>
+                    </div>
+			
+                    
                     
                     
                 </section>
@@ -203,39 +260,39 @@ function    searchFunction(){
                <script>
 				function filterFunc() {
                     var prodfilter = document.getElementById ("sel1");
-					var dollvar1 = document.getElementById("doll1");
-                    var dollvar2 = document.getElementById("doll2");
+					var crystalvar1 = document.getElementById("crystal1");
+                    var crystalvar2 = document.getElementById("crystal2");
 
-					var gunvar = document.getElementById("gun1");
+					var oilvar = document.getElementById("oil1");
 					var othervar = document.getElementById("other");
                     
                     var comparevalue = prodfilter.value;
                     
-                    if (comparevalue == "gun"){
-						dollvar1.style.display = "none";
-                        dollvar2.style.display = "none";
+                    if (comparevalue == "oil"){
+						crystalvar1.style.display = "none";
+                        crystalvar2.style.display = "none";
                         othervar.style.display = "none";
-                        gunvar.style.display = "block";
+                        oilvar.style.display = "block";
                        
 						}
-                        else if (comparevalue == "doll"){
+                        else if (comparevalue == "crystal"){
                         othervar.style.display = "none";
-                        gunvar.style.display = "none"; 
-                        dollvar1.style.display = "block";
-                        dollvar2.style.display = "block";
+                        oilvar.style.display = "none"; 
+                        crystalvar1.style.display = "block";
+                        crystalvar2.style.display = "block";
                         return;
                             }
                             else if (comparevalue == "other"){
-                                dollvar1.style.display = "none";
-                        dollvar2.style.display = "none";
-                        gunvar.style.display = "none";
+                                crystalvar1.style.display = "none";
+                        crystalvar2.style.display = "none";
+                        oilvar.style.display = "none";
                         othervar.style.display = "block";
                                 }
                                 else {
                                      othervar.style.display = "block";
-                        gunvar.style.display = "block"; 
-                        dollvar1.style.display = "block";
-                        dollvar2.style.display = "block";
+                        oilvar.style.display = "block"; 
+                        crystalvar1.style.display = "block";
+                        crystalvar2.style.display = "block";
                                     }
 					
                     
@@ -247,10 +304,10 @@ function    searchFunction(){
                         function sortFunc(){
                             var prodsort = document.getElementById ("sel2");
                             
-                            var dollvar01 = document.getElementById("doll1");
-                    var dollvar02 = document.getElementById("doll2");
+                            var crystalvar01 = document.getElementById("crystal1");
+                    var crystalvar02 = document.getElementById("crystal2");
 
-					var gunvar0 = document.getElementById("gun1");
+					var gunvar0 = document.getElementById("oil1");
 					var othervar0 = document.getElementById("other");
                     
                     var comparevalue = prodsort.value;
@@ -259,12 +316,12 @@ function    searchFunction(){
                     
                     if (comparevalue == "price"){
                     
-                    newnodesort.removeChild (gunvar0);
+                    newnodesort.removeChild (oilvar0);
                     newnodesort.removeChild (othervar0);
-                    newnodesort.removeChild (dollvar02);
-                    newnodesort.removeChild (dollvar01);
+                    newnodesort.removeChild (crystalvar02);
+                    newnodesort.removeChild (crystalvar01);
                     
-					childmaker += "<div class='product-card' id = 'other'>" + othervar0.innerHTML + "</div><br/>" + "<div class='product-card' id = 'doll1'>" + dollvar01.innerHTML + "</div><br/>"  + "<div class='product-card' id = 'gun1'>" + gunvar0.innerHTML + "</div><br/>" + "</div><br/>" + "<div class='product-card' id = 'doll2'>" + dollvar02.innerHTML + "</div>" ;
+					childmaker += "<div class='product-card' id = 'other'>" + othervar0.innerHTML + "</div><br/>" + "<div class='product-card' id = 'crystal11'>" + crystalvar01.innerHTML + "</div><br/>"  + "<div class='product-card' id = 'oil1'>" + oilvar0.innerHTML + "</div><br/>" + "</div><br/>" + "<div class='product-card' id = 'crystal2'>" + crystalvar02.innerHTML + "</div>" ;
                     
                     newnodesort.innerHTML += childmaker;
                         
@@ -272,10 +329,10 @@ function    searchFunction(){
                         else if (comparevalue == "featured"){
                         newnodesort.removeChild (gunvar0);
                     newnodesort.removeChild (othervar0);
-                    newnodesort.removeChild (dollvar02);
-                    newnodesort.removeChild (dollvar01);
+                    newnodesort.removeChild (crystalvar02);
+                    newnodesort.removeChild (crystalvar01);
                     
-					childmaker += "<div class='product-card' id = 'doll1'>" + dollvar01.innerHTML + "</div><br/>" + "<div class='product-card' id = 'gun1'>" + gunvar0.innerHTML + "</div><br/>" + "</div><br/>" + "<div class='product-card' id = 'doll2'>" + dollvar02.innerHTML + "</div><br/>" +  "<div class='product-card' id = 'other'>" + othervar0.innerHTML + "</div>" ;
+					childmaker += "<div class='product-card' id = 'crystal1'>" + crystalvar01.innerHTML + "</div><br/>" + "<div class='product-card' id = 'oil1'>" + oilvar0.innerHTML + "</div><br/>" + "</div><br/>" + "<div class='product-card' id = 'crystal2'>" + crystalvar02.innerHTML + "</div><br/>" +  "<div class='product-card' id = 'other'>" + othervar0.innerHTML + "</div>" ;
                     
                     newnodesort.innerHTML += childmaker;
                         
