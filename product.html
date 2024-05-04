@@ -31,7 +31,7 @@
             <section class="products">
                 
                 <div class="pcard">                    
-                    <img src="./img/toy1.jpg" class="primg0" alt="unavailable" >
+                    <img src="./img/SmokyQuartz.jpg" class="primg0" alt="unavailable" >
                     <div class="product-info">
                         <h1><script>document.write(prodb[0].pname);</script></h1>
                         <p class="price" id="price0"><script>document.write(prodb[0].price);</script>$</p>
@@ -60,9 +60,9 @@
                 
                 <div class="pcard">
                     
-                    <img src="./img/toy2.jpg" class="primg0" alt="unavailable" >
+                    <img src="./img/Moon_oil.jpg" class="primg0" alt="unavailable" >
                     <div class="product-info">
-                        <h1>Teddy Bear</h1>
+                        <h1>Moon oil</h1>
                         <p class="price" id = "price1"><script>document.write(prodb[1].price);</script>$</p>
                     <p>Product Description</p>
                     <!-----start rating----->
@@ -91,9 +91,9 @@
                     <div class="pcard">
                     
                     
-                    <img src="./img/gun1.jpg" class="primg0" alt="unavailable" >
+                    <img src="./img/celestite.jpg" class="primg0" alt="unavailable" >
                     <div class="product-info">
-                    <h1>Toy Gun</h1>
+                    <h1>Celestite</h1>
                     <p class="price" id = "price2"><script>document.write(prodb[2].price);</script>$</p>
                     <p>Product Description</p>
                     
@@ -121,9 +121,9 @@
                     <hr>
                     <div class="pcard">
                     
-                    <img src="./img/toy3.jpg" class="primg0" alt="unavailable" >
+                    <img src="./img/dragonsblood.jpg" class="primg0" alt="unavailable" >
                     <div class="product-info">
-                    <h1>Circles</h1></h1>
+                    <h1>Dragons Blood Jasper</h1></h1>
                     <p class="price" id = "price3"><script>document.write(prodb[3].price);</script>$</p>
                     <p>Product Description</p>
                     <!-----start rating----->
@@ -148,6 +148,35 @@
                     </form></p>
                     </div>
                     <hr>
+
+		     <div class="pcard">                    
+                    <img src="./img/moonstone.jpg" class="primg0" alt="unavailable" >
+                    <div class="product-info">
+                        <h1><script>document.write(prodb[4].pname);</script></h1>
+                        <p class="price" id="price0"><script>document.write(prodb[4].price);</script>$</p>
+                        <p>Product Description</p>
+                        <!-----start rating----->                        
+                        <span class="rating" data-default-rating="4.5"></span>                         
+                        <!-----end rating----->
+                    </div>
+                    <p> <form class = "pform">
+                        <label for="quantity">Enter Quantity:</label><br/>
+                        <input type="number" id="quantity0" name="quantity" min="1" max="5" onchange = "instantPrice4()">
+                        <script>
+                        function instantPrice4 () {
+                            var quantvar4 = document.getElementById("quantity4");                            
+                            var quantmp4 = quantvar0.value;                             
+							var newPrice0 = quantmp4 * (prodb[4].price);                            
+                            var priceout4 = document.getElementById ("price4");
+                            priceout4.innerHTML = newPrice4 + "$";
+                            
+                        }
+                            </script>
+                        <input class="pbutton" type="submit" value="Add to Cart">
+                    </form></p> <br/> <br/> 
+                </div>
+                <hr>
+                
                     </section>
                     <br>
                     <!------- End Products-------->
